@@ -1,10 +1,20 @@
-#include <iostream>
 #include "compte.h"
-using namespace std;
 
-class compte{
-    private:
+// 
+Compte::Compte(double initialSolde) : solde(initialSolde) {}
 
-    public:
-    ;
-};
+void Compte::deposer(double montant) {
+    solde += montant;
+}
+
+void Compte::retirer(double montant) {
+    if (montant <= solde) {
+        solde -= montant;
+    } else {
+        
+    }
+}
+
+double Compte::consulterSolde() {
+    return solde;
+}
